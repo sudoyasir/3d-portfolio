@@ -71,8 +71,8 @@ export default function ContentList({
           const maxX = window.innerWidth - 250;
 
           gsap.to(revealRef.current, {
-            x: gsap.utils.clamp(0, maxX, mousePos.x - 110),
-            y: gsap.utils.clamp(0, maxY, mousePos.y - 160),
+            x: gsap.utils.clamp(0, maxX, mousePos.x - 160),
+            y: gsap.utils.clamp(0, maxY, mousePos.y - 120),
 
             rotation: speed * (mousePos.x > lastMousePos.current.x ? 1 : -1),
 
@@ -98,8 +98,8 @@ export default function ContentList({
       : fallbackItemImage;
     return asImageSrc(image, {
       fit: "crop",
-      w: 220,
-      h: 320,
+      w: 320,
+      h: 220,
       exp: -10,
     });
   });
@@ -163,7 +163,7 @@ export default function ContentList({
 
       {/* Hover Element */}
       <div
-        className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
+        className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[220px] w-[350px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
         style={{
           backgroundImage:
             currentItem !== null ? `url(${contentImages[currentItem]})` : "",
