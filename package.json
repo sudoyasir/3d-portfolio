@@ -1,5 +1,6 @@
 {
   "name": "yasir2002",
+  "homepage": "https://yasir2002.github.io/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,6 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
@@ -16,6 +19,7 @@
     "@react-three/drei": "^9.105.3",
     "@react-three/fiber": "^8.16.1",
     "@types/three": "^0.163.0",
+    "@vercel/speed-insights": "^1.0.10",
     "clsx": "^2.1.0",
     "gsap": "^3.12.5",
     "next": "14.1.4",
@@ -33,6 +37,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
+    "gh-pages": "^6.1.1",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.13",
