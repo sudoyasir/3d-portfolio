@@ -168,7 +168,6 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
-  | ExperienceSlice
   | ContentIndexSlice
   | TechListSlice
   | BiographySlice;
