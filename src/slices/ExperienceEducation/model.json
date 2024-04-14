@@ -1,7 +1,7 @@
 {
   "id": "experience",
   "type": "SharedSlice",
-  "name": "Experience",
+  "name": "ExperienceEducation",
   "description": "Experience",
   "variations": [
     {

@@ -168,6 +168,7 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ExperienceSlice
   | ContentIndexSlice
   | TechListSlice
   | BiographySlice;
@@ -661,11 +662,11 @@ export type ContentIndexSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Experience → Primary*
+ * Primary content in *ExperienceEducation → Primary*
  */
 export interface ExperienceSliceDefaultPrimary {
   /**
-   * Heading field in *Experience → Primary*
+   * Heading field in *ExperienceEducation → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -676,11 +677,11 @@ export interface ExperienceSliceDefaultPrimary {
 }
 
 /**
- * Primary content in *Experience → Items*
+ * Primary content in *ExperienceEducation → Items*
  */
 export interface ExperienceSliceDefaultItem {
   /**
-   * Title field in *Experience → Items*
+   * Title field in *ExperienceEducation → Items*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -690,7 +691,7 @@ export interface ExperienceSliceDefaultItem {
   title: prismic.KeyTextField;
 
   /**
-   * Time Period field in *Experience → Items*
+   * Time Period field in *ExperienceEducation → Items*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -700,7 +701,7 @@ export interface ExperienceSliceDefaultItem {
   time_period: prismic.KeyTextField;
 
   /**
-   * Institution field in *Experience → Items*
+   * Institution field in *ExperienceEducation → Items*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -710,7 +711,7 @@ export interface ExperienceSliceDefaultItem {
   institution: prismic.KeyTextField;
 
   /**
-   * Description field in *Experience → Items*
+   * Description field in *ExperienceEducation → Items*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -721,7 +722,7 @@ export interface ExperienceSliceDefaultItem {
 }
 
 /**
- * Default variation for Experience Slice
+ * Default variation for ExperienceEducation Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -734,12 +735,12 @@ export type ExperienceSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Experience*
+ * Slice variation for *ExperienceEducation*
  */
 type ExperienceSliceVariation = ExperienceSliceDefault;
 
 /**
- * Experience Shared Slice
+ * ExperienceEducation Shared Slice
  *
  * - **API ID**: `experience`
  * - **Description**: Experience
