@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { Content, KeyTextField } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { Shapes } from "@/slices/Hero/Shapes";
-import Bounded from "@/components/Bounded";
+import Bounded from "../../components/Bounded";
 import gsap from "gsap";
 
 /**

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { createClient } from "@/prismicio";
-import ContentBody from "@/components/ContentBody";
+import ContentBody from "../../../components/ContentBody";
 
 type Params = { uid: string };
 

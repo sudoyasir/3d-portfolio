@@ -8,8 +8,8 @@ import { gsap } from "gsap/gsap-core";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
-import Bounded from "@/components/Bounded";
-import Heading from "@/components/Heading";
+import Bounded from "../../components/Bounded";
+import Heading from "../../components/Heading";
 gsap.registerPlugin(ScrollTrigger);
 
 /**
@@ -29,7 +29,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
         scrollTrigger: {
           start: "top",
           end: "bottom top",
-          scrub: 4,
+          scrub: 2,
         },
       });
 
