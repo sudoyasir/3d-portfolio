@@ -10,3 +10,15 @@
     hsla(222, 0%, 0%, 0) 100%
   );
 }
+
+.navbar-transition {
+  transition: height 3s ease-in-out;
+}
+
+.menu-closed {
+  height: 0;
+}
+
+.menu-open {
+  height: auto;
+}

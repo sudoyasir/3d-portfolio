@@ -33,33 +33,49 @@ export default function NavBar({
         </div>
         <div
           className={clsx(
-            "absolute left-0 right-0 z-50 bg-slate-50 px-4 pt-2 transition-height duration-300 ease-in-out overflow-hidden md:hidden",
-            open ? "h-auto" : "h-0" // Adjust height based on open state
+            "absolute left-0 right-0 z-50 bg-slate-50 px-4 overflow-hidden rounded-b-xl transition-height duration-500 ease-in-out",
+            open && "h-auto",
+            !open && "h-0"
           )}
         >
-          {settings.data.nav_item.map(({ link, label }, index) => (
-            <PrismicNextLink
-              key={label}
-              className={clsx(
-                "group block overflow-hidden rounded px-3 py-1 text-xl font-bold text-slate-900",
-                pathname.includes(asLink(link) as string)
-                  ? "text-yellow-500"
-                  : "text-slate-900"
-              )}
-              field={link}
-              onClick={() => setOpen(false)}
-              aria-current={
-                pathname.includes(asLink(link) as string) ? "page" : undefined
-              }
+          <div className="flex justify-between items-center">
+            <NameLogo name={settings.data.name} />
+            <button
+              aria-expanded={open}
+              aria-label="Close menu"
+              className="p-2 text-2xl text-slate-800"
+              onClick={() => setOpen(false)} // Close menu on button click
             >
-              <span className="relative">{label}</span>
-            </PrismicNextLink>
-          ))}
-          <Button
-            linkField={settings.data.cta_link}
-            label={settings.data.cta_label}
-            className="mt-3 ml-3"
-          />
+              <MdClose />
+            </button>
+          </div>
+          <div className="mt-4 pb-4">
+            {settings.data.nav_item.map(({ link, label }, index) => (
+              <PrismicNextLink
+                key={label}
+                className={clsx(
+                  "group block overflow-hidden rounded px-3 py-1 text-xl font-bold text-slate-900",
+                  pathname.includes(asLink(link) as string)
+                    ? "text-yellow-500"
+                    : "text-slate-900"
+                )}
+                field={link}
+                onClick={() => setOpen(false)} // Close menu on link click
+                aria-current={
+                  pathname.includes(asLink(link) as string)
+                    ? "page"
+                    : undefined
+                }
+              >
+                <span className="relative">{label}</span>
+              </PrismicNextLink>
+            ))}
+            <Button
+              linkField={settings.data.cta_link}
+              label={settings.data.cta_label}
+              className="mt-3 ml-3"
+            />
+          </div>
         </div>
         <DesktopMenu settings={settings} pathname={pathname} />
       </ul>
