@@ -35,7 +35,7 @@ const Biography = ({ slice }: BiographyProps): JSX.Element => {
 
         <Avatar
           image={slice.primary.avatar}
-          className="row-start-1 max-w-sm md:col-start-2 md:row-end-3"
+          className="row-start-1 max-w-sm md:col-start-2 md:row-end-3 object-cover"
         />
       </div>
     </Bounded>
