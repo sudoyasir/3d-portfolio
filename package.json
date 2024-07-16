@@ -1,8 +1,8 @@
 {
-  "name": "yasir2002",
-  "homepage": "https://yasir2002.github.io/",
+  "name": "portfolio",
+  "homepage": "https://3d-portfolio-next.netlify.app/",
   "version": "0.1.0",
-  "private": true, 
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -32,7 +32,7 @@
     "@slicemachine/adapter-next": "^0.3.38",
     "@tailwindcss/typography": "^0.5.12",
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
